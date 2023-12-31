@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Mi Editz</title>
+	<link rel="stylesheet" href="./mediaqueries.css" />
+	<link rel="stylesheet" href="./style.css" type="text/css" />
+	<link rel="shortcut icon" href="./asserts/logo-favicon.png" />
+
+</head>
+
+<body>
+	<!-- Navbar starts -->
+	<nav class="desktop-nav">
+		<div class="menu">
+			<ul class="nav-links">
+				<li><a href="./">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#hire-us">Hire</a></li>
+				<li><a href="#contact-us">Contact</a></li>
+			</ul>
+		</div>
+		<a href="#" class="ham-menu">
+			<span>
+				<img src="./asserts/menu.svg" alt="" />
+			</span>
+		</a>
+	</nav>
+	<!-- Navbar ends -->
+	<br />
+	<div class="homepage">
+		<div>
+			<img src="/asserts/logo.png" alt="logo" class="head-logo" />
+		</div>
+		<div>
+			<h1 class="head-title">Mi Editz</h1>
+			<p class="tagline">A Creative Media Company</p>
+			<button id="ser_btn" onclick="ser_btn(this)">Services</button>
+		</div>
+	</div>
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+	<div id="about">
+		<h2 class="head">About Mi Editz</h2>
+		<br /><br />
+		<img src="/asserts/creator.jpg" alt="creator" class="creator" />
+		<br />
+		<div class="creator-name">
+			<h3>Mithilesh ES</h3>
+			<p>Founder</p>
+		</div>
+		<p class="abt">
+			Mi Editz is a Creative Media Company, Here we offer wide<br />
+			range of services such as video editing, Photo Retouching, <br />Logo
+			Designing, Banner and Thumbnail Designing with your <br />satisfaction!
+		</p>
+
+		<div class="abt-foot">
+			<h2>2020</h2>
+			<h2>50+</h2>
+			<h2>100%</h2>
+			<p>Founded Since</p>
+			<p>Projects</p>
+			<p>Satisfaction</p>
+		</div>
+	</div>
+
+	<br /><br /><br /><br />
+	<!-- Hire section starts -->
+	<hr id="hire-us" />
+	<br /><br /><br />
+	<h2 class="head">Hire us!</h2>
+	<br /><br />
+	<div id="hire">
+		<form action="">
+			<label>Email Address</label><br />
+			<input type="email" id="h-email" placeholder="123@gmail.com" required /><br /><br />
+			<label>Project Details</label><br />
+			<textarea id="h-message" placeholder="Describe your Project" required></textarea><br /><br /><br />
+			<button onclick="hire()" id="hire-btn">Hire Now!</button>
+		</form>
+	</div>
+	<!-- Hire section ends -->
+	<br /><br /><br />
+	<hr id="contact-us" />
+	<br /><br /><br />
+	<!-- Contact Section starts -->
+	<h2 class="head">Contact us!</h2>
+	<br /><br />
+	<div id="contact">
+		<form id="form">
+			<label>First Name</label><br />
+			<input type="text" id="name" required placeholder="John" /><br /><br />
+			<label>Email Address</label><br />
+			<input type="email" id="email" placeholder="123@gmail.com" required /><br /><br />
+			<label>Content</label><br />
+			<textarea id="message" placeholder="Enter your Message" required></textarea><br /><br /><br />
+			<button onclick="sendMessage();" id="contact-btn">Send</button>
+		</form>
+	</div>
+	<!-- Contact section ends -->
+
+	<br /><br /><br />
+	<!-- Footer Starts Here -->
+	<hr />
+	<br /><br />
+	<div class="footer">
+		<div class="doc">
+			<h3>Documentation</h3>
+			<br />
+			<a href="./documentation/disclaimer.html">Disclaimer</a><br />
+			<a href="./documentation/privacy-policy.html">Privacy Policy</a><br />
+			<a href="./documentation/terms-and-conditions.html">Terms and Conditions</a>
+		</div>
+		<div class="social-media">
+			<h3>Follow us on</h3>
+			<br />
+			<a href="https://instagram.com/mi_editz_off" target="_blank"><img src="/asserts/instagram.png"
+					alt="instagram" /></a>
+			<a href="www.linkedin.com/in/mithilesh-es" target="_blank"><img src="/asserts/linkedin.png"
+					alt="linkedin" /></a>
+			<a href="https://www.behance.net/mithilmithil" target="_blank"><img src="/asserts/behance.png"
+					alt="behance" /></a>
+			<a href="" target="_blank"><img src="/asserts/mail.png" alt="mail" /></a>
+		</div>
+
+		<br /><br />
+		<a href="/asserts/MITHILESH_Resume.pdf" id="resume-btn">View Resume</a>
+	</div>
+	<div>
+		<p class="rights">© All Rights Reserved - Mi Editz</p>
+		<br />
+	</div>
+	<!-- Footer Ends -->
+	<script src="./script.js" defer></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+		defer></script>
+</body>
+
+</html>
