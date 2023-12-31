@@ -54,19 +54,13 @@ nav {
 	justify-content: space-around;
 	align-items: center;
 	height: 10vh;
-	background: var(--btn-bg-color-light);
+	background-color: var(--btn-bg-color-light);
 }
 
 .ham-menu {
 	display: none;
 	margin-right: 100px;
 	transition: all 0.2s ease;
-}
-@media screen and (max-width: 426px) {
-	.ham-menu {
-		display: flex;
-		width: max-content;
-	}
 }
 
 /* head title */
@@ -473,4 +467,49 @@ iframe {
 	padding: 20px;
 	border-radius: 30px;
 	font-size: 15px;
+}
+
+/* Media Queries starts here */
+
+@media screen and (max-width: 426px) {
+	* {
+		transition: all 0.2s ease-in-out;
+		margin: 0;
+		padding: 0;
+	}
+	.head-logo {
+		width: 130px;
+		height: auto;
+	}
+	.head-title {
+		font-size: 20px;
+		margin-top: 3vh;
+		text-align: center;
+	}
+	.tagline {
+		text-align: center;
+	}
+	#ser_btn {
+		margin: auto;
+		margin-top: 150px;
+	}
+	.ham-menu {
+		display: flex;
+	}
+
+	#hire,
+	#contact {
+		width: 200px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.carousel img {
+		width: calc(100% / 2);
+	}
+}
+@media screen and (max-width: 550px) {
+	.carousel img {
+		width: 100%;
+	}
 }
