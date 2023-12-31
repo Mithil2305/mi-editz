@@ -494,12 +494,12 @@ iframe {
 		margin-top: 150px;
 	}
 	.ham-menu {
-		display: flex;
+		display: list-item;
 	}
-
-	#hire,
-	#contact {
-		width: 200px;
+	.homepage {
+		display: grid;
+		grid-template-columns: 1fr;
+		margin: auto;
 	}
 }
 
