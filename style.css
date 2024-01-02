@@ -26,41 +26,29 @@ html {
 	margin-top: 150px;
 }
 /* navbar light */
-
-nav,
-.nav-links {
-	display: flex;
-	list-style: none;
-}
-
-.nav-links {
-	gap: 4rem;
-}
-
-.nav-links a {
-	text-decoration: none;
-	color: var(--primary-color-light);
-}
-.nav-links a:hover {
-	text-decoration-line: underline;
-	font-size: 20px;
-	transition: all 0.2s ease-in-out;
-}
-
 nav {
-	margin: 0;
-	font-weight: 700;
-	font-size: 17px;
-	justify-content: space-around;
-	align-items: center;
-	height: 10vh;
 	background-color: var(--btn-bg-color-light);
+	margin: 0;
+	padding: 0;
+}
+nav ul {
+	/* width: 100%; */
+	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }
 
-.ham-menu {
-	display: none;
-	margin-right: 100px;
-	transition: all 0.2s ease;
+nav li {
+	height: 50px;
+}
+
+nav a {
+	height: 100%;
+	color: var(--primary-color-light);
+	text-decoration: none;
+	align-items: center;
+	display: flex;
 }
 
 /* head title */
@@ -241,7 +229,6 @@ textarea {
 #hire-btn,
 #contact-btn {
 	color: var(--primary-color-light);
-
 	font-size: 20px;
 	padding: 25px;
 	width: 150px;
@@ -492,9 +479,6 @@ iframe {
 	#ser_btn {
 		margin: auto;
 		margin-top: 150px;
-	}
-	.ham-menu {
-		display: list-item;
 	}
 	.homepage {
 		display: grid;
