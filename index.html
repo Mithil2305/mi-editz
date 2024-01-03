@@ -15,7 +15,16 @@
 <body>
 	<!-- Navbar starts -->
 	<nav>
-		<ul>
+		<ul class="navbar">
+			<li class="desknav"><a href="./">Home</a></li>
+			<li class="desknav"><a href="#about">About</a></li>
+			<li class="desknav"><a href="#hire-us">Hire</a></li>
+			<li class="desknav"><a href="#contact-us">Contact</a></li>
+			<li class="menu-btn" onclick="sidebar()"><a href="#"><img src="./asserts/menu.png" alt="" width="30px"></a>
+			</li>
+		</ul>
+		<ul class="sidebar">
+			<li onclick="hide()"><a href=""><img src="./asserts/cross.png" alt="" width="25px"></a></li>
 			<li><a href="./">Home</a></li>
 			<li><a href="#about">About</a></li>
 			<li><a href="#hire-us">Hire</a></li>
@@ -23,7 +32,6 @@
 		</ul>
 	</nav>
 	<!-- Navbar ends -->
-	<br />
 	<div class="homepage">
 		<div>
 			<img src="./asserts/logo.png" alt="logo" class="head-logo" />
@@ -31,26 +39,29 @@
 		<div>
 			<h1 class="head-title">Mi Editz</h1>
 			<p class="tagline">A Creative Media Company</p>
+			<!-- <a href="#hire-us" id="ser_btn">Hire us</a><br> -->
 			<button id="ser_btn" onclick="ser_btn(this)">Services</button>
 		</div>
 	</div>
-	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-
-	<div id="about">
-		<h2 class="head">About Mi Editz</h2>
-		<br /><br />
-		<img src="./asserts/creator.jpg" alt="creator" class="creator" />
-		<br />
-		<div class="creator-name">
-			<h3>Mithilesh ES</h3>
-			<p>Founder</p>
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<br id="about" />
+	<h2 class="head">About Mi Editz</h2>
+	<div>
+		<div>
+			<img src="./asserts/creator.jpg" alt="creator" class="creator" />
+			<br />
+			<div class="creator-name">
+				<h3>Mithilesh ES</h3>
+				<p>Founder</p>
+			</div>
 		</div>
-		<p class="abt">
-			Mi Editz is a Creative Media Company, Here we offer wide<br />
-			range of services such as video editing, Photo Retouching, <br />Logo
-			Designing, Banner and Thumbnail Designing with your <br />satisfaction!
-		</p>
-
+		<div>
+			<p class="abt">
+				Mi Editz is a Creative Media Company, Here we offer wide<br />
+				range of services such as video editing, Photo Retouching, <br />Logo
+				Designing, Banner and Thumbnail Designing with your <br />satisfaction!
+			</p>
+		</div>
 		<div class="abt-foot">
 			<h2>2020</h2>
 			<h2>50+</h2>

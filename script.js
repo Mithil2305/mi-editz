@@ -1,3 +1,13 @@
+// Navbar Function
+function sidebar() {
+	const sidebar = document.querySelector(".sidebar");
+	sidebar.style.display = "flex";
+}
+function hide() {
+	const sidebar = document.querySelector(".sidebar");
+	sidebar.style.display = "none";
+}
+
 //button redirect functions
 
 function ser_btn(link) {
