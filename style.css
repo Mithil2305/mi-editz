@@ -621,7 +621,7 @@ iframe {
 	#contact input[type="email"],
 	#contact input[type="text"],
 	textarea {
-		width: 300px;
+		width: 250px;
 		transition: all 0.2s ease-in-out;
 	}
 }
