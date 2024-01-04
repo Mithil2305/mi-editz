@@ -93,25 +93,6 @@ nav img:active {
 .menu-btn {
 	display: none;
 }
-@media screen and (max-width: 690px) {
-	.desknav {
-		display: none;
-		transition: all 0.2s linear;
-	}
-	.menu-btn {
-		display: block;
-		transition: all 1.2s ease-in-out;
-	}
-}
-
-@media screen and (max-width: 350px) {
-	.sidebar {
-		width: 100%;
-		transition: all 0.2s ease-in-out;
-		border-radius: 0 0 40px 40px;
-		top: 0;
-	}
-}
 
 /* head title */
 .head-logo {
@@ -241,26 +222,13 @@ hr {
 	font-family: "Sequel100Black-45";
 	src: url(./fonts/Sequel100Black-45.ttf);
 }
-
-/* form{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-	
-} */
-
+/* 
 #hire,
 #contact {
 	display: flex;
 	justify-content: center;
-}
-#hire label,
-#contact label {
-	font-family: "Sequel100Black-45";
-	line-height: 40px;
-}
+} */
+
 #hire input[type="email"],
 #contact input[type="email"],
 #contact input[type="text"] {
@@ -312,19 +280,42 @@ textarea {
 	cursor: pointer;
 }
 
+form label {
+	font-family: "Sequel100Black-45";
+	line-height: 40px;
+	display: block;
+	text-align: left;
+}
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-right: auto;
+}
+
+/* #hire input[type="email"],
+#contact input[type="email"],
+#contact input[type="text"],
+textarea {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+} */
+
 /* footer */
+
+/* .footer:last-child {
+	display: none;
+} */
 .footer {
 	display: flex;
 	flex-direction: row;
 	gap: 100vh;
-	justify-content: space-evenly;
+	justify-content: center;
 }
-.footer:last-child {
-	display: none;
-}
-.doc {
-	margin-left: 100px;
-}
+
 .doc a {
 	text-decoration: none;
 	color: var(--primary-color-light);
@@ -337,9 +328,10 @@ textarea {
 }
 .social-media {
 	font-size: 17px;
+}
+
+.social-media h3 {
 	text-align: right;
-	margin-right: 150px;
-	/* margin-top: -10px; */
 }
 .social-media img {
 	margin-right: 10px;
@@ -539,16 +531,20 @@ iframe {
 	.carousel img {
 		width: 100%;
 	}
+
+	#hire input[type="email"],
+	#contact input[type="email"],
+	#contact input[type="text"],
+	textarea {
+		width: 150px;
+		transition: all 0.2s ease-in-out;
+	}
 }
 
 @media screen and (max-width: 690px) {
 	.homepage {
 		display: flex;
 		flex-direction: column;
-	}
-
-	.res-form {
-		width: 120px;
 	}
 
 	.abt-foot {
@@ -573,5 +569,69 @@ iframe {
 
 	.abt {
 		margin-top: 25px;
+	}
+}
+
+@media screen and (max-width: 690px) {
+	.desknav {
+		display: none;
+		transition: all 0.2s linear;
+	}
+	.menu-btn {
+		display: block;
+		transition: all 1.2s ease-in-out;
+	}
+	.head-logo {
+		width: 150px;
+		height: auto;
+		margin-bottom: 10vh;
+		transition: all 0.2s ease-in-out;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.sidebar {
+		width: 100%;
+		transition: all 0.2s ease-in-out;
+		border-radius: 0 0 40px 40px;
+		top: 0;
+	}
+}
+
+@media screen and (max-width: 902px) {
+	#hire input[type="email"],
+	#contact input[type="email"],
+	#contact input[type="text"],
+	textarea {
+		width: 500px;
+		transition: all 0.2s ease-in-out;
+	}
+}
+
+@media screen and (max-width: 1215px) {
+	.footer {
+		gap: 60vh;
+		transition: all 0.2s ease-in-out;
+	}
+}
+
+@media screen and (max-width: 880px) {
+	.footer {
+		gap: 40vh;
+		transition: all 0.2s ease-in-out;
+	}
+}
+
+@media screen and (max-width: 712px) {
+	.footer {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		transition: all 0.3s ease-in-out;
+		gap: 10vh;
+	}
+	.social-media h3 {
+		text-align: center;
 	}
 }
