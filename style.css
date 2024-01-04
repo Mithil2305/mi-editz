@@ -624,6 +624,24 @@ iframe {
 		width: 250px;
 		transition: all 0.2s ease-in-out;
 	}
+
+	.head-title {
+		font-size: 45px;
+	}
+	.tagline {
+		font-size: 15px;
+	}
+	.head {
+		font-size: 30px;
+	}
+	.abt-foot {
+		font-size: 15px;
+	}
+
+	.abt {
+		font-size: 15px;
+		margin-top: 45px;
+	}
 }
 
 @media screen and (max-width: 1215px) {
@@ -656,5 +674,13 @@ iframe {
 		flex-direction: column;
 		gap: 0;
 		transition: all 0.2s ease-in-out;
+	}
+}
+
+@media screen and (max-width: 370px) {
+	#ser_btn {
+		font-size: 25px;
+		width: 270px;
+		border-radius: 20px;
 	}
 }
