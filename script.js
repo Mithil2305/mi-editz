@@ -17,32 +17,32 @@ function ser_btn(link) {
 
 function banner(link) {
 	console.log(link.value);
-	location.href = "./banner-des.html";
+	location.href = "./banner-des";
 }
 
 function webdev(link) {
 	console.log(link.value);
-	location.href = "./web-dev.html";
+	location.href = "./web-dev";
 }
 
 function videdit(link) {
 	console.log(link.value);
-	location.href = "./video-edit.html";
+	location.href = "./video-edit";
 }
 
 function photoedit(link) {
 	console.log(link.value);
-	location.href = "./photo-edit.html";
+	location.href = "./photo-edit";
 }
 
 function uiux(link) {
 	console.log(link.value);
-	location.href = "./ui-ux.html";
+	location.href = "./ui-ux";
 }
 
 function logodes(link) {
 	console.log(link.value);
-	location.href = "./logo-des.html";
+	location.href = "./logo-des";
 }
 
 //image slider
