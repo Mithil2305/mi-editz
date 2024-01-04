@@ -13,20 +13,22 @@
 
 <body>
 	<!-- Navbar starts -->
-	<nav class="desktop-nav">
-		<div class="menu">
-			<ul class="nav-links">
-				<li><a href="./index.html">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#hire">Hire</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
-		</div>
-		<a href="#" class="ham-menu">
-			<span>
-				<img src="./asserts/menu.svg" alt="" />
-			</span>
-		</a>
+	<nav>
+		<ul class="navbar">
+			<li class="desknav"><a href="./">Home</a></li>
+			<li class="desknav"><a href="#about">About</a></li>
+			<li class="desknav"><a href="#hire-us">Hire</a></li>
+			<li class="desknav"><a href="#contact-us">Contact</a></li>
+			<li class="menu-btn" onclick="sidebar()"><a href="#"><img src="./asserts/menu.png" alt="" width="30px"></a>
+			</li>
+		</ul>
+		<ul class="sidebar">
+			<li onclick="hide()"><a href=""><img src="./asserts/cross.png" alt="" width="25px"></a></li>
+			<li><a href="./">Home</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#hire-us">Hire</a></li>
+			<li><a href="#contact-us">Contact</a></li>
+		</ul>
 	</nav>
 	<!-- Navbar ends -->
 	<br /><br />
