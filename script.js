@@ -12,7 +12,7 @@ function hide() {
 
 function ser_btn(link) {
 	console.log(link.value);
-	location.href = "./services.html";
+	location.href = "./services";
 }
 
 function banner(link) {
