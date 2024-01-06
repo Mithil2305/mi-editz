@@ -154,11 +154,37 @@ nav img:active {
 	transition: all 0.2s ease-in-out;
 }
 
+#ser_btn:active,
+#hire-btn:active,
+#contact-btn:active,
+.hire-m:active {
+	scale: 0.95;
+	transition: all 0.2s ease-in-out;
+}
+
 hr {
 	width: 90%;
 	margin: auto;
 }
 
+.hire-m {
+	font-family: "Poppins";
+	width: 300px;
+	font-size: 25px;
+	font-weight: 500;
+	letter-spacing: 1.5px;
+	line-height: 45px;
+	border-radius: 30px;
+	background: none;
+	color: var(--primary-color-light);
+	border: 2px solid var(--primary-color-light);
+}
+.hire-m:hover {
+	color: var(--secondary-color-light);
+	background: var(--primary-color-light);
+	scale: 1.05;
+	transition: all 0.2s ease-in-out;
+}
 /* About Section */
 
 .creator {
@@ -282,9 +308,8 @@ textarea {
 
 form label {
 	font-family: "Sequel100Black-45";
-	line-height: 40px;
+	/* line-height: 0px; */
 	display: block;
-	text-align: left;
 }
 form {
 	display: flex;

@@ -45,6 +45,11 @@ function logodes(link) {
 	location.href = "./logo-des";
 }
 
+function hire_btn(link) {
+	console.log(link.value);
+	location.href = "./#hire-us";
+}
+
 //image slider
 const carousel = document.querySelector(".carousel"),
 	firstImg = carousel.querySelectorAll("img")[0],
