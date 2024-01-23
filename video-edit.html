@@ -40,10 +40,36 @@
 		<div class="wrapper">
 			<i id="left" class="fa-solid fa-angle-left"></i>
 			<div class="carousel">
-				<img src="./asserts/uploading.jpg" draggable="false" />
+				<!-- <img src="./asserts/uploading.jpg" draggable="false" /> -->
+				<iframe src="./asserts/video-edit/final (1).mp4" autoplay=false frameborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (2).mp4" autoplay=falseframeborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (3).mp4" autoplay=falseframeborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (4).mp4" autoplay=falseframeborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (5).mp4" autoplay=falseframeborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (6).mp4" autoplay=falseframeborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (7).mp4" autoplay=falseframeborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (8).mp4" autoplay=falseframeborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (9).mp4" autoplay=falseframeborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (10).mp4" autoplay=false frameborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (11).mp4" autoplay=false frameborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (12).mp4" autoplay=false frameborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (13).mp4" autoplay=false frameborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (14).mp4" autoplay=false frameborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (15).mp4" autoplay=false frameborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (16).mp4" autoplay=false frameborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (17).mp4" autoplay=false frameborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (18).mp4" autoplay=false frameborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (19).mp4" autoplay=false frameborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (20).mp4" autoplay=false frameborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (21).mp4" autoplay=false frameborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (22).mp4" autoplay=false frameborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (23).mp4" autoplay=false frameborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (24).mp4" autoplay=false frameborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (25).mp4" autoplay=false frameborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (26).mp4" autoplay=false frameborder="0"></iframe>
+				<iframe src="./asserts/video-edit/final (27).mp4" autoplay=false frameborder="0"></iframe>
+				<i id="right" class="fa-solid fa-angle-right"></i>
 			</div>
-			<i id="right" class="fa-solid fa-angle-right"></i>
-		</div>
 	</section>
 	<br /><br />
 	<!-- Footer Starts Here -->
@@ -76,6 +102,94 @@
 	</div>
 	<!-- Footer Ends -->
 	<script src="./script.js" defer></script>
+	<script>
+		//image slider
+		const carousel = document.querySelector(".carousel"),
+			firstiframe = carousel.querySelectorAll("iframe")[0],
+			arrowIcons = document.querySelectorAll(".wrapper i");
+
+		let isDragStart = false,
+			isDragging = false,
+			prevPageX,
+			prevScrollLeft,
+			positionDiff;
+
+		const showHideIcons = () => {
+			// showing and hiding prev/next icon according to carousel scroll left value
+			let scrollWidth = carousel.scrollWidth - carousel.clientWidth; // getting max scrollable width
+			arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
+			arrowIcons[1].style.display =
+				carousel.scrollLeft == scrollWidth ? "none" : "block";
+		};
+
+		arrowIcons.forEach((icon) => {
+			icon.addEventListener("click", () => {
+				let firstiframeWidth = firstiframe.clientWidth + 14; // getting first iframe width & adding 14 margin value
+				// if clicked icon is left, reduce width value from the carousel scroll left else add to it
+				carousel.scrollLeft += icon.id == "left" ? -firstiframeWidth : firstiframeWidth;
+				setTimeout(() => showHideIcons(), 60); // calling showHideIcons after 60ms
+			});
+		});
+
+		const autoSlide = () => {
+			// if there is no image left to scroll then return from here
+			if (
+				carousel.scrollLeft - (carousel.scrollWidth - carousel.clientWidth) > -1 ||
+				carousel.scrollLeft <= 0
+			)
+				return;
+
+			positionDiff = Math.abs(positionDiff); // making positionDiff value to positive
+			let firstiframeWidth = firstiframe.clientWidth + 14;
+			// getting difference value that needs to add or reduce from carousel left to take middle iframe center
+			let valDifference = firstiframeWidth - positionDiff;
+
+			if (carousel.scrollLeft > prevScrollLeft) {
+				// if user is scrolling to the right
+				return (carousel.scrollLeft +=
+					positionDiff > firstiframeWidth / 3 ? valDifference : -positionDiff);
+			}
+			// if user is scrolling to the left
+			carousel.scrollLeft -=
+				positionDiff > firstiframeWidth / 3 ? valDifference : -positionDiff;
+		};
+
+		const dragStart = (e) => {
+			// updatating global variables value on mouse down event
+			isDragStart = true;
+			prevPageX = e.pageX || e.touches[0].pageX;
+			prevScrollLeft = carousel.scrollLeft;
+		};
+
+		const dragging = (e) => {
+			// scrolling images/carousel to left according to mouse pointer
+			if (!isDragStart) return;
+			e.preventDefault();
+			isDragging = true;
+			carousel.classList.add("dragging");
+			positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+			carousel.scrollLeft = prevScrollLeft - positionDiff;
+			showHideIcons();
+		};
+
+		const dragStop = () => {
+			isDragStart = false;
+			carousel.classList.remove("dragging");
+
+			if (!isDragging) return;
+			isDragging = false;
+			autoSlide();
+		};
+
+		carousel.addEventListener("mousedown", dragStart);
+		carousel.addEventListener("touchstart", dragStart);
+
+		document.addEventListener("mousemove", dragging);
+		carousel.addEventListener("touchmove", dragging);
+
+		document.addEventListener("mouseup", dragStop);
+		carousel.addEventListener("touchend", dragStop);
+	</script>
 </body>
 
 </html>
