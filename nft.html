@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NFT</title>
+    <link rel="icon" href="./asserts/logo-favicon.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./mediaqueries.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- Navbar starts -->
+    <nav>
+        <ul class="navbar">
+            <li class="desknav"><a href="./">Home</a></li>
+            <li class="desknav"><a href="#about">About</a></li>
+            <li class="desknav"><a href="#hire-us">Hire</a></li>
+            <li class="desknav"><a href="#contact-us">Contact</a></li>
+            <li class="desknav"><a href="./nft.html">NFT</a></li>
+            <li class="menu-btn" onclick="sidebar()"><a href="#"><img src="./asserts/menu.png" alt="" width="30px"></a>
+            </li>
+        </ul>
+        <ul class="sidebar">
+            <li onclick="hide()"><a href=""><img src="./asserts/cross.png" alt="" width="25px"></a></li>
+            <li><a href="./">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#hire-us">Hire</a></li>
+            <li><a href="#contact-us">Contact</a></li>
+            <li><a href="./nft.html">NFT</a></li>
+        </ul>
+    </nav>
+    <!-- Navbar ends -->
+
+    <br /><br />
+    <h2 class="head">NFT Marketplace</h2>
+    <section>
+        <div class="first_nft">
+            <div class="logo_nft">
+                <img src="./asserts/logo.png" alt="" width="180px" height="180px">
+            </div>
+            <div>
+                <h2>Discover the Awesome NFTs</h2>
+                <p>Mifty is a nft collection available on opensea!</p>
+            </div>
+        </div>
+    </section>
+    <br><br><br><br><br>
+    <section>
+        <h2 class="head">Get Started</h2>
+        <section>
+            <br><br>
+            <div class="wrapper">
+                <i id="left" class="fa-solid fa-angle-left"></i>
+                <div class="carousel">
+                    <img src="./asserts/photo-edit/dragon.png" alt="Digital Artwork">
+                    <img src="./asserts/photo-edit/flyingman-c19.png" alt="Digital Artwork">
+                    <img src="./asserts/photo-edit/samurai.png" alt="Digital Artwork">
+                    <img src="./asserts/photo-edit/hvb.png" alt="Digital Artwork">
+                    <img src="./asserts/photo-edit/ufo.png" alt="Digital Artwork">
+                    <img src="./asserts/photo-edit/space-house.png" alt="Digital Artwork">
+                    <img src="./asserts/photo-edit/space-rock-house.jpg" alt="Digital Artwork">
+                    <img src="./asserts/photo-edit/spaceship.jpeg" alt="Digital Artwork">
+                    <img src="./asserts/photo-edit/spiderman.jpg" alt="Digital Artwork">
+                    <img src="./asserts/photo-edit/thunderman.png" alt="Digital Artwork">
+                    <img src="./asserts/photo-edit/malaysia-tower.png" alt="Digital Artwork">
+                </div>
+                <i id="right" class="fa-solid fa-angle-right"></i>
+            </div>
+        </section>
+    </section>
+    <br><br><br><br><br>
+    <form id="nft_form">
+        <h2 class="head">Pre-Order Form</h2><br><br>
+        <label class="lab">First Name</label>
+        <input type="text" id="name" placeholder="your name" required><br><br>
+        <label class="lab">Email</label>
+        <input type="email" id="email" placeholder="example@gmail.com" required><br><br>
+        <label class="lab">No.of NFTs</label>
+        <input type="number" placeholder=">1" required><br><br>
+        <button onclick="nft_btn();">Request Order</button>
+    </form>
+    <br /><br /><br />
+    <!-- Footer Starts Here -->
+    <hr />
+    <br /><br />
+    <div class="footer">
+        <div class="doc">
+            <h3>Documentation</h3>
+            <br />
+            <a href="./documentation/disclaimer">Disclaimer</a><br />
+            <a href="./documentation/privacy-policy">Privacy Policy</a><br />
+            <a href="./documentation/terms-and-conditions">Terms and Conditions</a>
+        </div>
+        <div class="social-media">
+            <h3>Follow us on</h3>
+            <br />
+            <a href="https://instagram.com/mi_editz_off" target="_blank"><img src="./asserts/instagram.png"
+                    alt="instagram" /></a>
+            <a href="www.linkedin.com/in/mithilesh-es" target="_blank"><img src="./asserts/linkedin.png"
+                    alt="linkedin" /></a>
+            <a href="https://www.behance.net/mithilmithil" target="_blank"><img src="./asserts/behance.png"
+                    alt="behance" /></a>
+            <a href="" target="_blank"><img src="/asserts/mail.png" alt="mail" /></a> <br><br><br><br>
+            <a href="./asserts/MITHILESH_Resume.pdf" id="resume-btn">View Resume</a>
+        </div>
+    </div><br><br>
+    <div>
+        <p class="rights">© All Rights Reserved - Mi Editz</p>
+        <br />
+    </div>
+    <!-- Footer Ends -->
+    <script src="./script.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+        defer></script>
+</body>
+
+</html>

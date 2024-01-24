@@ -539,6 +539,61 @@ iframe {
 	font-size: 15px;
 }
 
+/* nft page */
+.first_nft {
+	display: flex;
+	/* flex-direction: row; */
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+	text-align: center;
+	margin-top: 50px;
+	gap: 50vh;
+	height: 300px;
+	width: 75%;
+	border-radius: 50px;
+	background: #f0f0f0;
+	box-shadow: 28px 28px 56px #bebebe, -28px -28px 56px #ffffff;
+}
+
+.lab {
+	font-family: "Poppins";
+	margin-bottom: 20px;
+}
+
+#nft_form input[type="text"],
+input[type="email"],
+input[type="number"] {
+	width: 25%;
+	height: 50px;
+	padding-left: 15px;
+	border: none;
+	border-radius: 11px;
+	background: #f9f9f9;
+	box-shadow: 11px 11px 24px #ebebeb, -11px -11px 24px #ffffff;
+}
+
+#nft_form button {
+	width: 150px;
+	height: 50px;
+	font-size: 15px;
+	font-weight: 600;
+	border: none;
+	border-radius: 15px;
+	background: #f8f8f8;
+	box-shadow: 11px 11px 24px #dedede, -11px -11px 24px #ffffff;
+	cursor: pointer;
+}
+
+#nft_form button:hover {
+	scale: 1.15;
+	transition: all 0.1s ease-in-out;
+}
+
+#nft_form button:active {
+	scale: 0.95;
+	transition: all 0.2s ease-in-out;
+}
 /* Media Queries starts here */
 
 @media screen and (max-width: 900px) {
