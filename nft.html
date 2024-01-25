@@ -7,12 +7,10 @@
     <title>NFT</title>
     <link rel="icon" href="./asserts/logo-favicon.png" />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./mediaqueries.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 </head>
 
 <body>
-
     <!-- Navbar starts -->
     <nav>
         <ul class="navbar">
@@ -37,20 +35,26 @@
 
     <br /><br />
     <h2 class="head">NFT Marketplace</h2>
-    <section>
+    <section id="nft-h">
         <div class="first_nft">
             <div class="logo_nft">
-                <img src="./asserts/logo.png" alt="" width="180px" height="180px">
+                <img src="./asserts/logo-favicon.png" alt="" width="180px" height="180px">
             </div>
             <div>
-                <h2>Discover the Awesome NFTs</h2>
-                <p>Mifty is a nft collection available on opensea!</p>
+                <h2>MIFTY by MiEditz</h2><br>
+                <p>Mifty is a platform for creating and collecting digital artworks as NFT. Mifty
+                    allows <br>artists to showcase their unique creations and sell them to collectors who<br> value
+                    their
+                    authenticity and rarity. Mifty is the ultimate destination for NFT<br> enthusiasts who
+                    want to discover and
+                    own original digital artworks
+                </p>
             </div>
         </div>
     </section>
     <br><br><br><br><br>
     <section>
-        <h2 class="head">Get Started</h2>
+        <h2 class="head">Gallery</h2>
         <section>
             <br><br>
             <div class="wrapper">
@@ -73,15 +77,15 @@
         </section>
     </section>
     <br><br><br><br><br>
-    <form id="nft_form">
+    <form id="nft-form">
         <h2 class="head">Pre-Order Form</h2><br><br>
         <label class="lab">First Name</label>
-        <input type="text" id="name" placeholder="your name" required><br><br>
+        <input type="text" id="n-name" placeholder="your name*" required><br><br>
         <label class="lab">Email</label>
-        <input type="email" id="email" placeholder="example@gmail.com" required><br><br>
+        <input type="email" id="n-email" placeholder="example@gmail.com*" required><br><br>
         <label class="lab">No.of NFTs</label>
-        <input type="number" placeholder=">1" required><br><br>
-        <button onclick="nft_btn();">Request Order</button>
+        <!-- <input type="text" id="n-num" placeholder=">1*" required><br><br> -->
+        <button onclick="nft()">Request Order</button>
     </form>
     <br /><br /><br />
     <!-- Footer Starts Here -->
@@ -113,9 +117,41 @@
         <br />
     </div>
     <!-- Footer Ends -->
-    <script src="./script.js" defer></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
         defer></script>
+    <script>
+
+        //EMailJS code (NFT request form)
+
+        function nft() {
+            (function () {
+                emailjs.init("WsLg60PixgRJzm9Cm");
+            })();
+
+            var params = {
+                nname: document.getElementById("n-name").value,
+                nemail: document.getElementById("n-email").value,
+                // nnum: document.getElementById("n-num").value,
+            };
+
+            const serviceID = "service_8wvr4vp";
+            const templateID = "template_xyhrxrb";
+
+            emailjs
+                .send(serviceID, templateID, params)
+                .then((res) => {
+                    document.getElementById("n-name").value = "";
+                    document.getElementById("n-email").value = "";
+                    // document.getElementById("n-num").value = "";
+                    console.log(res);
+                    alert("Order Request Sent Successfully!");
+                })
+                .catch((err) => console.log(err));
+            console.log("Executed successfully")
+        }
+
+    </script>
+
 </body>
 
 </html>

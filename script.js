@@ -190,29 +190,3 @@ function hire() {
 		})
 		.catch((err) => console.log(err));
 }
-
-//EMailJS code (NFT request form)
-
-function nft_btn() {
-	(function () {
-		emailjs.init("MPSGUwsps1r_YopKl");
-	})();
-
-	var params = {
-		email: document.getElementById("h-email").value,
-		message: document.getElementById("h-message").value,
-	};
-
-	const serviceID = "service_9imffya";
-	const templateID = "template_vc1byil";
-
-	emailjs
-		.send(serviceID, templateID, params)
-		.then((res) => {
-			document.getElementById("h-email").value = "";
-			document.getElementById("h-message").value = "";
-			console.log(res);
-			alert("Order Request Sent Successfully!");
-		})
-		.catch((err) => console.log(err));
-}
