@@ -200,6 +200,7 @@ hr {
 	text-align: left;
 	font-size: 19px;
 	font-weight: 600;
+	padding: 12px;
 }
 .about {
 	display: flex;
@@ -573,7 +574,7 @@ iframe {
 #nft-form input[type="text"],
 input[type="email"],
 input[type="number"] {
-	width: 25%;
+	width: 280px;
 	height: 50px;
 	padding-left: 15px;
 	border: none;
@@ -605,6 +606,24 @@ input[type="number"] {
 }
 /* Media Queries starts here */
 
+@media screen and (max-width: 1290px) {
+	.first_nft {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 1070px) {
+	.first_nft p {
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-width: 760px) {
+	.first_nft p {
+		font-size: 13px;
+		padding: 12px;
+	}
+}
 @media screen and (max-width: 900px) {
 	.carousel img {
 		width: calc(100% / 2);
@@ -638,6 +657,12 @@ input[type="number"] {
 		gap: 10vh;
 		flex-wrap: nowrap;
 	}
+	.head-logo {
+		width: 150px;
+		height: auto;
+		margin-bottom: 10vh;
+		transition: all 0.2s ease-in-out;
+	}
 }
 @media screen and (max-width: 995px) {
 	.about,
@@ -653,9 +678,18 @@ input[type="number"] {
 	.abt {
 		margin-top: 25px;
 	}
+
+	.first_nft {
+		flex-direction: column;
+		height: 500px;
+	}
+	.first_nft img {
+		width: 120px;
+		height: 120px;
+	}
 }
 
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 765px) {
 	.desknav {
 		display: none;
 		transition: all 0.2s linear;
@@ -663,12 +697,6 @@ input[type="number"] {
 	.menu-btn {
 		display: block;
 		transition: all 1.2s ease-in-out;
-	}
-	.head-logo {
-		width: 150px;
-		height: auto;
-		margin-bottom: 10vh;
-		transition: all 0.2s ease-in-out;
 	}
 }
 
