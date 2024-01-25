@@ -132,7 +132,7 @@
             var params = {
                 nname: document.getElementById("n-name").value,
                 nemail: document.getElementById("n-email").value,
-                // nnum: document.getElementById("n-num").value,
+                nnum: document.getElementById("n-num").value,
             };
 
             const serviceID = "service_8wvr4vp";
@@ -143,7 +143,7 @@
                 .then((res) => {
                     document.getElementById("n-name").value = "";
                     document.getElementById("n-email").value = "";
-                    // document.getElementById("n-num").value = "";
+                    document.getElementById("n-num").value = "";
                     console.log(res);
                     alert("Order Request Sent Successfully!");
                 })
