@@ -802,6 +802,12 @@ input[type="text"] {
 		transition: all 0.2s ease-in-out;
 	}
 
+	.giveaway-form input[type="email"],
+	input[type="text"] {
+		transition: all 0.2s ease-in-out;
+		width: 250px;
+	}
+
 	.head-title {
 		font-size: 45px;
 	}
