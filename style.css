@@ -21,13 +21,12 @@ html {
 /* Home Page Style */
 .homepage {
 	margin-top: 150px;
-	/* gap: 60vh;	 */
 	display: flex;
-	flex-direction: row;
+	/* flex-direction: row;
 	text-align: center;
 	justify-content: space-evenly;
 	align-items: center;
-	align-content: center;
+	align-content: center; */
 }
 /* navbar light */
 nav {
