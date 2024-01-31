@@ -22,11 +22,11 @@ html {
 .homepage {
 	margin-top: 150px;
 	display: flex;
-	/* flex-direction: row;
+	flex-direction: row;
 	text-align: center;
 	justify-content: space-evenly;
 	align-items: center;
-	align-content: center; */
+	/* align-content: center; */
 }
 /* navbar light */
 nav {
@@ -571,8 +571,8 @@ iframe {
 }
 
 #nft-form input[type="text"],
-input[type="email"],
-input[type="number"] {
+#nft-form input[type="email"],
+#nft-form input[type="number"] {
 	width: 280px;
 	height: 50px;
 	padding-left: 15px;
@@ -603,6 +603,68 @@ input[type="number"] {
 	scale: 0.95;
 	transition: all 0.2s ease-in-out;
 }
+
+/* Nft giveaway */
+.giv-cont {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.giveaway-form form {
+	display: flex;
+	flex-direction: column;
+	margin-top: 50px;
+}
+.giveaway-form label {
+	font-family: poppins;
+}
+.giveaway-form input[type="email"],
+input[type="text"] {
+	width: 450px;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+
+#giv {
+	background: linear-gradient(115deg, #f9ce34, #ee2a7b, #6228d7);
+	padding: 10px;
+	border: none;
+	border-radius: 10px;
+}
+#giv a {
+	font-family: Poppins;
+	text-decoration: none;
+	color: #fff;
+	font-weight: 600;
+	font-size: 17px;
+}
+#g-btn {
+	padding: 14px;
+	margin-top: 20px;
+	margin-bottom: 100px;
+	width: 200px;
+	border-radius: 10px;
+	background-color: var(--primary-color-light);
+	color: var(--secondary-color-light);
+	border: none;
+	font-weight: 600;
+	font-size: 17px;
+}
+
+#g-btn:hover,
+#giv:hover {
+	scale: 1.1;
+	transition: all 0.2s ease-in-out;
+}
+
+#g-btn:active,
+#giv:active {
+	scale: 0.95;
+	transition: all 0.2s ease-in-out;
+}
+
 /* Media Queries starts here */
 
 @media screen and (max-width: 1290px) {
