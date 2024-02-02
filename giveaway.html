@@ -44,13 +44,16 @@
         <div class="giveaway-form">
             <form>
                 <label>First Name</label><br />
-                <input type="text" id="g_name" required placeholder="John" /><br /><br />
+                <input type="text" id="gname" required placeholder="John" /><br /><br />
                 <label>Email Address</label><br />
-                <input type="email" id="g_email" placeholder="123@gmail.com" required /><br /><br />
-                <button id="giv"><a href="https://instagram.com/mi_editz_off" target="_blank">Follow Mi
-                        Editz</a></button>
-                <button onclick="giveaway();" id="g-btn">Participate Now!</button>
+                <input type="email" id="gemail" placeholder="123@gmail.com" required /><br /><br />
             </form>
+            <center>
+                <button id="giv"><a href="https://instagram.com/mi_editz_off" target="_blank">Follow Mi
+                        Editz</a></button><br>
+                <button onclick="giveaway();" id="g-btn">Participate Now!</button>
+
+            </center>
         </div>
     </div>
     <center>
@@ -98,8 +101,8 @@
             })();
 
             var params = {
-                name: document.getElementById("g_name").value,
-                email: document.getElementById("g_email").value,
+                gname: document.getElementById("gname").value,
+                gemail: document.getElementById("gemail").value,
             };
 
             const serviceID = "service_jpgca3l";
@@ -108,8 +111,8 @@
             emailjs
                 .send(serviceID, templateID, params)
                 .then((res) => {
-                    document.getElementById("g_name").value = "";
-                    document.getElementById("g_email").value = "";
+                    document.getElementById("gname").value = "";
+                    document.getElementById("gemail").value = "";
                     console.log(res);
                     alert("congratulations for participating on the Giveaway!");
                 })
