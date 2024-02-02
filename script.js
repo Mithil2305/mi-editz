@@ -190,29 +190,3 @@ function hire() {
 		})
 		.catch((err) => console.log(err));
 }
-
-//EMailJS code (giveaway form)
-
-function giveaway() {
-	(function () {
-		emailjs.init("WsLg60PixgRJzm9Cm");
-	})();
-
-	var params = {
-		name: document.getElementById("g-name").value,
-		email: document.getElementById("g-email").value,
-	};
-
-	const serviceID = "service_jpgca3l";
-	const templateID = "mifty_giveaway";
-
-	emailjs
-		.send(serviceID, templateID, params)
-		.then((res) => {
-			document.getElementById("g-name").value = "";
-			document.getElementById("g-email").value = "";
-			console.log(res);
-			alert("Congradulations for participating on the Giveaway!");
-		})
-		.catch((err) => console.log(err));
-}
