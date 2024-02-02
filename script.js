@@ -203,7 +203,7 @@ function giveaway() {
 		email: document.getElementById("g-email").value,
 	};
 
-	const serviceID = "service_41spcya";
+	const serviceID = "service_jpgca3l";
 	const templateID = "mifty_giveaway";
 
 	emailjs
