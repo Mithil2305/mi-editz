@@ -528,6 +528,19 @@ iframe {
 	border-radius: 10px;
 }
 
+/* thumbnail */
+
+.thumb {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 10px;
+}
+.thumb img {
+	width: 350px;
+	border-radius: 15px;
+}
 /* Documentation pages starts */
 
 /* Disclaimer */
