@@ -22,7 +22,7 @@ function banner(link) {
 
 function webdev(link) {
 	console.log(link.value);
-	location.href = "./web-dev";
+	location.href = "./web-development";
 }
 
 function videdit(link) {
@@ -32,7 +32,7 @@ function videdit(link) {
 
 function photoedit(link) {
 	console.log(link.value);
-	location.href = "./photo-edit";
+	location.href = "./artworks";
 }
 
 function uiux(link) {
@@ -42,7 +42,7 @@ function uiux(link) {
 
 function logodes(link) {
 	console.log(link.value);
-	location.href = "./logo-des";
+	location.href = "./logo-designs";
 }
 
 function hire_btn(link) {
