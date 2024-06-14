@@ -888,3 +888,28 @@ input[type="text"] {
 		transition: all 0.2s ease-in-out;
 	}
 }
+
+/* ui portfolio button */
+.Portfolio {
+	padding: 13px;
+	background-color: var(--primary-color-light);
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.Portfolio a {
+	font-size: 19px;
+	font-weight: 500;
+	text-decoration: none;
+	color: var(--secondary-color-light);
+}
+
+.Portfolio:hover {
+	background-color: #292929;
+}
+
+.uix {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
